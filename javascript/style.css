@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 20%, 83%);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all 0.8s ease;
+}
+
+#display {
+    border: none;
+    font-size: 2rem; /* Reduced from 5rem */
+    font-weight: bold;
+    height: 60px;     /* Reduced */
+    width: 80%;       /* More compact */
+    text-align: right;
+    padding: 8px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.8s ease;
+}
+
+.darkmodebutton {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.dark-mode-button {
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.dark-mode-button:hover {
+    transform: rotateZ(35deg);
+    background-color: black;
+}
+
+#calculator {
+    background-color: #fcb0b0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    width: 300px;  /* Resized */
+  max-width: 90vw;
+    overflow: hidden;
+    padding-top: 25px;
+    box-shadow: 0 0 25px rgb(241, 112, 133);
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+button {
+    height: 55px;
+    width: 55px;
+    font-size: 2rem; /* Reduced */
+    font-weight: bold;
+    border-radius: 10px;
+    border-style: none;
+    transition: all 0.4s ease;
+    transform: scale(1);
+}
+button:hover {
+    background-color: #FF6363;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #CF0F47;
+    cursor: pointer;
+}
+button:active {
+    background-color: #b34444;
+    color: white;
+    transform: scale(0.7);
+    box-shadow: 0 0 10px #CF0F47;
+}
+
+.operator-btn {
+    background-color: #FF9A9A;
+    color: white;
+}
+.operator-btn:hover {
+    background-color: #e08888;
+    color: white;
+    box-shadow: 0 0 10px #df7a7a;
+}
+.operator-btn:active {
+    transform: scale(0.7);
+    box-shadow: 0 0 10px #df7a7a;
+}
+
+.dark-mode {
+    background-color: black;
+}
+.dark-mode #display {
+    background-color: #FF6363;
+    color: white;
+}
+.dark-mode button {
+    background-color: #FF6363;
+    color: white;
+}
+
+
+
+
+@media (max-width: 480px) {
+  #calculator {
+    width: 100vw;
+    max-width: 100%;
+    padding: 20px 10px;
+    box-shadow: 0 0 15px rgb(241, 112, 133);
+  }
+
+  #display {
+    width: 100%;
+    font-size: 1.6rem;
+    height: 50px;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  #keys {
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  button {
+    height: 50px;
+    width: 50px;
+    font-size: 1.5rem;
+  }
+
+  .darkmodebutton {
+    top: 10px;
+    left: 10px;
+  }
+
+  .dark-mode-button {
+    height: 35px;
+    width: 35px;
+    font-size: 0.75rem;
+  }
+}
