@@ -150,14 +150,14 @@ button:active {
 
 @media (max-width: 480px) {
   #calculator {
-    width: 100vw;
+    width: 70vw;
     max-width: 100%;
     padding: 20px 10px;
     box-shadow: 0 0 15px rgb(241, 112, 133);
   }
 
   #display {
-    width: 100%;
+    width: 85%;
     font-size: 1.6rem;
     height: 50px;
     padding: 8px;
